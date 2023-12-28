@@ -18,6 +18,6 @@ jobs:
         with:
           audience: https://token.actions.githubusercontent.com
           role-to-assume: ${{secrets.IAM_ROLE_ARN}}
-          aws-region: "us-west-1"
+          aws-region: "eu-west-1"
       - name: deploy terraform
         run: make plan
