@@ -1,13 +1,13 @@
-name: Octo Organization CI
+name: deploy terraform
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: 
+      - main
 
 jobs:
-  build:
+  plan:
     runs-on: ubuntu-latest
-
     steps:
       - name: Run a one-line script
         run: echo Hello from Octo Organization
