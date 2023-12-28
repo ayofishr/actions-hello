@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "backend-test-terraform"
+    bucket = "jenkins-ci-cd-handson-revolve"
     key    = "handons/api-gateway/terraform.tfstates"
     region = "eu-west-1"
   }
