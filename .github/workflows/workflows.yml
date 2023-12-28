@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo Hello from Octo Organization
+      - name: checkout
+        uses: actions/checkout@v4.1.1
       - name: get credentials
-        uses: aws-actions/configure-aws-credentials
+        uses: aws-actions/configure-aws-credentials@v4.0.1
         with:
           audience: https://token.actions.githubusercontent.com
           role-to-assume: ${{secrets.IAM_ROLE_ARN}}
