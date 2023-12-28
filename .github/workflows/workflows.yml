@@ -11,3 +11,11 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo Hello from Octo Organization
+      - name: get credentials
+        uses: aws-actions/configure-aws-credentials
+        with:
+          audience: https://token.actions.githubusercontent.com
+          role-to-assume: ${{secrets.IAM_ROLE_ARN}}
+          aws-region: "us-west-1"
+      - name: deploy terraform
+        run: make plan
